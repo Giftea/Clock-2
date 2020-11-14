@@ -1,0 +1,97 @@
+*, *::after,::before{
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.clock{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    opacity: .8;
+    border-radius: 50%;
+    border: 10px dashed white;
+    position: relative;
+}
+
+.clock .number {
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem ;
+    text-align: center;
+   
+}
+
+.clock .number.one{ transform: rotate(30deg); }
+
+.clock .number.two{ transform: rotate(60deg); }
+
+.clock .number.three{ transform: rotate(90deg); }
+
+.clock .number.four{ transform: rotate(120deg); }
+
+.clock .number.five{ transform: rotate(150deg); }
+
+.clock .number.six{ transform: rotate(180deg); }
+
+.clock .number.seven{ transform: rotate(210deg); }
+
+.clock .number.eight{ transform: rotate(240deg); }
+
+.clock .number.nine{ transform: rotate(270deg); }
+
+.clock .number.ten{ transform: rotate(300deg); }
+
+.clock .number.eleven{transform: rotate(330deg); }
+
+.clock .hand{
+    --rotation :0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%; 
+    border: 1px solid black;
+    border-top-left-radius : 15px;
+    border-top-right-radius : 15px;
+    z-index: 2;
+    background-color: white;
+    transform: translate(-50%) ;
+    transform-origin: bottom;
+}
+
+.clock .hand.hour-hand{
+    width: 7px;
+    height:35% ;
+}
+
+.clock .hand.minute-hand{
+    width: 7px;
+    height:40% ;
+}
+
+.clock .hand.second-hand{
+    width: 3px;
+    height:45% ;
+    background-color: red;
+}
+
+.clock::after{
+    content: '';
+    position: absolute;
+    left: 51%;
+    top: 50%;
+    z-index: 3;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(-50% ,-50%);
+    width: 15px;
+    height: 15px; 
+}
